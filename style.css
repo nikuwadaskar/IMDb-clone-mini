@@ -1,0 +1,816 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
+  color: gold;
+}
+
+/* Navbar */
+
+.none {
+  display: none !important;
+}
+nav {
+  font-weight: 600;
+  height: 40px;
+  padding: 24px;
+  color: aliceblue;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+p {
+  margin: 0;
+}
+.logo img {
+  width: 50px;
+  height: 30px;
+}
+
+.watchlist img {
+  filter: invert(70%);
+  width: 50px;
+  height: 30px;
+}
+
+.watchlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-box {
+  width: 50%;
+  display: flex;
+  padding-left: 1%;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 3px;
+}
+.fa-magnifying-glass {
+  padding-left: 2%;
+  padding-top: 1%;
+  filter: invert(100%);
+}
+
+input,
+input:focus {
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px white inset;
+  border: white;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 10%;
+  align-items: center;
+}
+.fa-bars {
+  filter: invert(0%);
+}
+.line {
+  height: 30px;
+}
+
+
+
+/* Search Work */
+#card {
+  display: none;
+}
+
+section#search-result {
+  display: none;
+}
+section#search-result {
+  position: absolute;
+  z-index: 3;
+}
+#results {
+  padding: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(1, 1, 1, 0.71);
+}
+
+#results div img {
+  width: 200px;
+}
+#results div {
+  margin: 1%;
+  padding-top: 3%;
+  width: 200px;
+  margin-right: 0%;
+}
+#results div p {
+  width: 200px;
+  justify-content: space-between;
+
+  display: flex;
+  text-align: center;
+}
+
+div.search-one-watchlist {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: space-around;
+  align-items: center;
+}
+div.search-one-watchlist img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 1;
+  filter: invert(100%);
+  width: 60px;
+  height: 60px;
+}
+h2#search-title {
+  display: flex;
+  align-items: end;
+  margin: 2%;
+  margin-bottom: 0%;
+}
+
+div#movie-name {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+  background-color: rgba(1, 1, 1, 0.71);
+}
+
+button#back-icon\ {
+  font-size: 3rem;
+  color: white;
+  background-color: black;
+}
+
+
+/* Content body */
+
+/* main */
+
+h3,
+h1 {
+  color: gold;
+}
+.middle-section-movie-list-trailer {
+  color: rgb(122, 117, 117);
+}
+.middle-section-movie-list-trailer img {
+  filter: invert(80%);
+}
+main {
+  margin: 0% 2% 2% 2%;
+  margin-top: 37px;
+  display: flex;
+  height: 80vh;
+}
+
+/* main right  */
+
+.main-right {
+  overflow: hidden;
+  width: 66%;
+  height: 80vh;
+}
+
+.latest-movie-sneekpic {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: end;
+}
+.movie-name {
+  display: flex;
+  width: 100%;
+  align-items: top;
+  color: white;
+  gap: 2%;
+}
+a.movie-page-jump {
+  width: 24%;
+  height: 53%;
+}
+
+.latest-movie-poster {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0% 2% 0% 2%;
+  height: 51%;
+  width: 25%;
+}
+.movie-box-poster:hover,
+.middle-section-movie-list-poster:hover,
+.movie-page-poster:hover,
+.latest-movie-poster:hover {
+  filter: invert(10%);
+}
+.anchor-tag {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.addtowatch img {
+  width: 50px;
+  opacity: 0.6;
+}
+.icon-4x {
+  font-size: 4.8em;
+  margin: 1% 2% 50% 4%;
+}
+.time-stamp {
+  color: gray;
+  display: flex;
+  justify-content: baseline;
+}
+.next {
+  left: 90.5%;
+}
+.fa-angle-right {
+  font-size: 2em;
+}
+.prev {
+  left: 1.5%;
+}
+.next,
+.prev {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+  background-color: black;
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+.sneekpic-one {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+}
+.sneekpic-two {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+}
+#section {
+  overflow: hidden;
+  width: 63%;
+  height: 80vh;
+  position: absolute;
+}
+
+/* Main left  */
+
+.main-left {
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 34%;
+  height: 100%;
+}
+
+.movie-box {
+  display: flex;
+  background-color: rgb(37, 37, 37);
+  overflow: hidden;
+  padding: 1%;
+  display: flex;
+  justify-content: space-between;
+  height: 30%;
+}
+
+.movie-box-poster {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25%;
+  height: 100%;
+}
+.icon-3x {
+  font-size: 2.3em;
+}
+.movie-box-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 70%;
+}
+
+/* In theaters */
+
+.middle-section-two,
+.middle-section-one {
+  padding: 2%;
+  height: 80vh;
+}
+
+.middle-section-two {
+  margin-top: 15%;
+}
+.middle-section-movie-list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.middle-section-movie-list-card {
+  height: 100%;
+  width: 18%;
+}
+.middle-section-movie-list-poster {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 65%;
+}
+.middle-section-movie-list-rating {
+  height: 8%;
+}
+.middle-section-movie-list-name {
+  height: 10%;
+}
+.middle-section-movie-list-showtime {
+  height: 8%;
+}
+
+.material-symbols-outlined {
+  color: gold;
+}
+
+.raring-number {
+  display: flex;
+  gap: 12%;
+}
+
+.middle-section-movie-list-name {
+  color: rgb(244, 246, 248);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1rem;
+}
+
+.middle-section-movie-list-showtime {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(53, 50, 50);
+  border-radius: 5px;
+}
+
+button {
+  z-index: 2;
+  background-color: transparent;
+  color: black;
+  border: 0px;
+}
+button.next-in-theaters-button {
+  left: 96.5%;
+  top: 139%;
+  position: absolute;
+}
+.prev-in-theaters {
+  position: relative;
+  left: -1%;
+  top: -67%;
+}
+
+.prev-top-rated {
+  z-index: 2;
+  position: absolute;
+  top: 257%;
+}
+.next-top-rated {
+  z-index: 2;
+  position: absolute;
+  top: 257%;
+  left: 96%;
+}
+.hidden-slide {
+  position: absolute;
+  width: 96%;
+  height: 86%;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.moving-slide-two,
+.moving-slide-one {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.z-Index {
+  z-index: 1;
+}
+.visible-slide {
+  position: absolute;
+  width: 96%;
+  height: 86%;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.middle-section-movie-list-trailer img {
+  height: 100%;
+}
+.middle-section-movie-list-trailer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9%;
+  width: 100%;
+}
+
+/* Movie Page */
+
+iframe#videos-frame {
+  width: 500px;
+  height: 300px;
+}
+
+div#results-more-info i {
+  z-index: 2;
+  font-size: 3rem;
+}
+.results-more-info img {
+  width: 300px;
+  height: 200px;
+}
+.results-more-info {
+  height: 100%;
+  width: 98.7vw;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  gap: 10%;
+  flex-wrap: wrap;
+  background-color: rgba(63, 63, 60, 0.7);
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+h2#movie-page-trailer-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}
+
+.watchlist-moviepage {
+  display: flex;
+  gap: 0%;
+}
+.watchlist-moviepage img {
+  filter: invert(100%);
+  width: 50px;
+  height: 50px;
+}
+
+.movie-page-details {
+  height: 80vh;
+  margin: 5%;
+}
+
+.movie-page-heading-rating {
+  width: 88.7vw;
+  height: 18%;
+
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.movie-page-rating {
+  height: 100%;
+  font-weight: 700;
+
+  letter-spacing: 0.26rem;
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.movie-page-imdb-rating-info {
+  display: flex;
+  gap: 12%;
+}
+.movie-page-imdb-rating-info-numeric {
+  display: flex;
+}
+.movie-page-imdb-rating-info-star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+.movie-page-poster-info {
+  display: flex;
+  height: 100%;
+}
+
+.movie-page-poster-info {
+  margin-top: 3%;
+}
+.movie-page-poster {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 25%;
+  border-right: 3px solid gray;
+}
+iframe,
+.movie-page-trailer-player {
+  width: 55%;
+}
+
+.movie-page-more {
+  width: 20%;
+  background-color: gray;
+}
+
+.movie-page-videos,
+.movie-page-photos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.2rem;
+  border: 1px solid gray;
+
+  height: 50%;
+}
+.movie-page-videos {
+  border-bottom: 2px solid white;
+}
+
+.movie-page-middle-section {
+  margin: 5%;
+  margin-top: 13%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-page-movie-info {
+  width: 60%;
+  height: 100px;
+}
+
+.movie-page-genre p:hover {
+  box-shadow: 0px 0px 4px 0px white;
+}
+.movie-page-genre p {
+  padding: 0% 1% 0% 1%;
+  border-radius: 40px 40px 40px 40px;
+  border: 1px solid white;
+}
+
+.movie-page-genre {
+  display: flex;
+  gap: 2%;
+  margin-bottom: 3%;
+}
+hr {
+  color: white;
+}
+.movie-page-music,
+.movie-page-stars,
+.movie-page-director {
+  margin-top: 3%;
+}
+.names {
+  display: flex;
+  gap: 2%;
+}
+.movie-page-movie-info h5,
+.movie-page-director h5 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.middle-section-movie-list-name:hover,
+#movie-heading-two:hover,
+#movie-heading-one:hover,
+.movie-box-info-title:hover {
+  cursor: pointer;
+  color: rgb(223, 217, 217);
+}
+
+#similar-movies-main-left {
+  height: 30pc;
+}
+
+
+
+/* Watch list */
+
+.watchlistEffect :hover {
+  background-color: rgb(85, 83, 83);
+  cursor: pointer;
+}
+.main-watchlist {
+  display: flex;
+  justify-content: center;
+}
+
+.display {
+  width: 80vw;
+  height: 100vh;
+  justify-content: center;
+}
+.watchlist-movies > .movie-box {
+  display: flex;
+  justify-content: flex-start;
+  gap: 6%;
+}
+.watchlist-movies > .movie-box > .movie-box-poster {
+  height: 189px;
+  width: 129px;
+}
+
+.empty-message {
+  margin: 15%;
+  margin-left: 25%;
+}
+
+.watchlist-heading {
+  background-color: rgb(73, 71, 71);
+  display: flex;
+  padding: 4%;
+  font-weight: 800;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.clearAll:hover {
+  cursor: pointer;
+  padding: 0.6%;
+  box-shadow: 0px 0px 3px 1px rgb(245, 165, 165);
+  border-radius: 40px 40px 40px 40px;
+}
+.clearAll {
+  color: rgb(245, 165, 165);
+}
+
+
+
+/* footer */
+
+
+footer {
+  margin-top: 15%;
+  display: flex;
+  height: 2%;
+  justify-content: center;
+  flex-direction: column;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+}
+.social-media i:hover {
+  box-shadow: 0px 0px 4px 0px rgb(177, 171, 171);
+  color: rgb(189, 185, 185);
+}
+.social-media i {
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.copy-rights {
+  display: flex;
+  margin-top: 2%;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .none1000 {
+    display: none;
+  }
+  .main-left {
+    display: none;
+  }
+  .main-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid red; */
+    width: 100%;
+  }
+  #section {
+    width: 98%;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+
+  .movie-page-more {
+    display: none;
+  }
+  .movie-page-middle-section {
+    margin-top: 36%;
+
+    display: flex;
+    justify-content: center;
+  }
+  .movie-page-heading-rating {
+    margin-bottom: 12%;
+  }
+  .movie-page-popularity {
+    display: none;
+  }
+  form#form {
+    height: 35px;
+    display: flex;
+    position: absolute;
+    left: 22%;
+
+    background-color: white;
+    z-index: 5;
+  }
+  .none600 {
+    display: none;
+  }
+  .visible600 {
+    display: flex;
+    filter: invert(0%);
+  }
+  .movie-page-poster-info {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .movie-page-details {
+    margin: 0%;
+    margin-top: 6%;
+  }
+  .movie-page-heading-rating {
+    display: flex;
+
+    justify-content: space-around;
+  }
+  #search-box {
+    background-color: black;
+  }
+
+  .middle-section-movie-list-card {
+    height: 100%;
+    width: 22%;
+  }
+
+  .social-media {
+    margin-top: 12%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .watchlist-moviepage {
+    display: none;
+  }
+}

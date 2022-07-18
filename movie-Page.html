@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="my-title">Movie Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Search result page -->
+    <section id="search-result">
+      <div id="movie-name">
+        <h2 id="search-title"></h2>
+        <button type="button" id="back-icon " onclick="{handleBack()}">
+          <i class="fa fa-arrow-left"></i>
+        </button>
+      </div>
+      <div id="results"></div>
+    </section>
+    <!-- end of result page -->
+
+    <!-- Navbar Code starts  -->
+    <nav>
+      <div class="logo">
+        <img src="/Assets/IMDB_Logo_2016.svg.png" alt="" onclick="homePage()" />
+      </div>
+      <div class="menu">
+        <i class="fa-solid fa-bars"></i>
+        <p class="none1000">Menu</p>
+      </div>
+      <!-- Search box starts  -->
+      <div id="search-box" class="search-box none600">
+        <!-- Drop down menu starts  -->
+
+        <div class="dropbutton">
+          <div class="all">
+            <div class="btn-group">
+              <button
+                class="btn btn-secondary dropdown-toggle p-0 bg-white text-black rounded-0 border-0 px-2"
+                type="button"
+                id="dropdownMenuButton"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                All
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                <li><a class="dropdown-item" href="#">Menu item</a></li>
+                <li><a class="dropdown-item" href="#">Menu item</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- drop down menu ends  -->
+
+        <!-- Input Box starts  -->
+        <section id="search-page">
+          <div>
+            <form action="" id="form">
+              <input type="text" id="search" placeholder="Type Name" />
+              <button type="button" id="btn" onclick="{handleEvents()}">
+                Search
+              </button>
+            </form>
+          </div>
+        </section>
+        <!-- Input box ends  -->
+      </div>
+
+      <!-- search box ends  -->
+
+      <!-- More icons starts  -->
+      <i
+        class="fa-solid fa-magnifying-glass visible600"
+        onclick="serchbox()"
+      ></i>
+      <img class="none1000" src="/Assets/pro logo.jpg" alt="" />
+      <div class="line none1000"></div>
+
+      <div class="watchlist none1000 watchlistEffect" onclick="gotoWatchlist()">
+        <img src="/Assets/icon.svg" alt="" />
+        <p>Watchlist</p>
+      </div>
+      <div class="signin">
+        <p>Sign In</p>
+      </div>
+      <div class="language">
+        <p>EN</p>
+      </div>
+
+      <!-- more icons ends  -->
+    </nav>
+
+    <!-- nav barr ends  -->
+
+    <div class="movie-page-details">
+      <!-- Movie name and ratings and watchlist and popularaty indexs  starts -->
+
+      <div class="movie-page-heading-rating">
+        <div id="movie-page-movie-name-year" class="movie-page-movie-name-year">
+          <h1></h1>
+          <p></p>
+        </div>
+        <div
+          id="watchlist-moviepage"
+          class="watchlist-moviepage watchlistEffect"
+          onclick="addTowatchlist((this.getAttribute('data-movieid')))"
+          id="watchlist-moviepage"
+        >
+          Add to Watchlist
+          <img src="/Assets/icon.svg" alt="" />
+        </div>
+        <div class="movie-page-rating">
+          <div class="movie-page-imdb-rating">
+            <div class="movie-page-imdb-rating-heading">IMDb RATING</div>
+            <div class="movie-page-imdb-rating-info">
+              <div class="movie-page-imdb-rating-info-star">
+                <span class="material-symbols-outlined"> stars </span>
+              </div>
+              <div
+                id="movie-page-imdb-rating-info-numeric"
+                class="movie-page-imdb-rating-info-numeric"
+              ></div>
+            </div>
+          </div>
+          <div class="movie-page-popularity">
+            <div class="movie-page-popularity-heading">POPULARITY</div>
+            <div
+              id="movie-page-popularity-info"
+              class="movie-page-popularity-info"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Movie name and ratings and watchlist and popularaty indexs  Ends -->
+
+      <!-- Movie Poster and trailer  -->
+
+      <div class="movie-page-poster-info">
+        <div id="movie-page-poster" class="movie-page-poster"></div>
+
+        <iframe
+          id="movie-page-trailer-player"
+          src=""
+          frameborder="0"
+          allowfullscreen
+          ng-show="showvideo"
+        >
+        </iframe>
+        <!-- more photos and videos section starts  -->
+        <div class="movie-page-more">
+          <div class="movie-page-videos">
+            <i
+              class="fa-solid fa-video"
+              onclick="showVideos(this.getAttribute('data-movieid'))"
+              id="videos"
+            ></i>
+            <p>Videos</p>
+          </div>
+          <div class="movie-page-photos">
+            <i
+              class="fa-solid fa-images"
+              onclick="showPhotos(this.getAttribute('data-movieid'))"
+              id="photos"
+            ></i
+            >Photos
+          </div>
+
+          <div id="results-more-info" class="results-more-info">
+            <i class="fa fa-arrow-left"></i>
+          </div>
+        </div>
+        <!-- more photos and videos section ends   -->
+      </div>
+    </div>
+
+    <!-- Movie poster and trailer section end -->
+
+    <!-- Middele section starts Director genere cast musiciasn  -->
+    <div class="movie-page-middle-section">
+      <div class="movie-page-movie-info">
+        <div id="movie-page-genre" class="movie-page-genre"></div>
+        <div id="movie-page-plot" class="movie-page-plot"></div>
+        <hr />
+        <div class="movie-page-director">
+          <h5>Director</h5>
+          <div id="movie-page-director" class="names"></div>
+        </div>
+        <hr />
+        <div class="movie-page-stars">
+          <h5>Stars</h5>
+          <div id="movie-page-stars" class="names"></div>
+        </div>
+        <hr />
+        <div class="movie-page-music">
+          <h5>Music</h5>
+          <div id="movie-page-music" class="names"></div>
+        </div>
+        <hr />
+      </div>
+      <!-- Middele section starts Director genere cast musiciasn ends  -->
+
+      <!-- similart movies section starts -->
+
+      <div id="similar-movies-main-left" class="main-left">
+        <h3>Similar Movies</h3>
+        <div class="movie-box">
+          <div
+            id="movie-page-movie-box-poster-one"
+            class="movie-box-poster"
+          ></div>
+          <div class="movie-box-info">
+            <div class="movie-box-info-title">
+              <h4
+                id="movie-page-movie-box-heading-one"
+                onclick="toMoviePage(this.getAttribute('data-movieid')) ; gotoMoviePage()"
+              ></h4>
+              <p id="movie-page-movie-box-info-one"></p>
+            </div>
+          </div>
+        </div>
+        <div class="movie-box">
+          <div
+            id="movie-page-movie-box-poster-two"
+            class="movie-box-poster"
+          ></div>
+          <div class="movie-box-info">
+            <div class="movie-box-info-title">
+              <h4
+                id="movie-page-movie-box-heading-two"
+                onclick="toMoviePage(this.getAttribute('data-movieid')) ; gotoMoviePage()"
+              ></h4>
+              <p id="movie-page-movie-box-info-two"></p>
+            </div>
+          </div>
+        </div>
+        <div id="movie-box" class="movie-box">
+          <div
+            id="movie-page-movie-box-poster-three"
+            class="movie-box-poster"
+          ></div>
+          <div class="movie-box-info">
+            <div class="movie-box-info-title">
+              <h4
+                id="movie-page-movie-box-heading-three"
+                onclick="toMoviePage(this.getAttribute('data-movieid')) ; gotoMoviePage()"
+              ></h4>
+              <p id="movie-page-movie-box-info-three"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- similart movies section end  -->
+    </div>
+
+    <!-- scrips CDN  -->
+
+    <!--  fontawesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/b9448a8646.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstarps cdn -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Jquery Icons CDN -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- my scripts -->
+    <script src="/script.js"></script>
+  </body>
+</html>
