@@ -20,4 +20,4 @@ Remove from favourites button: Each movie should have remove from favourites but
 
 
 # Demo-Link
-`<link>` : [Food-Ninja](https://saurabhsangewar03.github.io/Food-Ninja/)# IMDb-clone-mini
+
