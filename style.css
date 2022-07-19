@@ -5,6 +5,7 @@
 body {
   background-color: black;
   color: white;
+  font-weight: 500;
 }
 
 a:hover {
@@ -596,6 +597,7 @@ iframe,
 
 .movie-page-genre p:hover {
   box-shadow: 0px 0px 4px 0px white;
+  background-color: rgba(63, 63, 60, 0.7);
 }
 .movie-page-genre p {
   padding: 0% 1% 0% 1%;
@@ -643,8 +645,16 @@ hr {
 /* Watch list */
 
 .watchlistEffect :hover {
-  background-color: rgb(85, 83, 83);
+  background-color: rgba(85, 83, 83,0.4);
+  box-shadow: 0px 0px 5px 0px black;
+  border-radius: 10px;
   cursor: pointer;
+}
+
+.remove-wathclist :hover{
+  color: rgb(245, 165, 165);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgb(245, 165, 165);
 }
 .main-watchlist {
   display: flex;
