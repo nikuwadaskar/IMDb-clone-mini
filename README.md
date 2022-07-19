@@ -20,4 +20,4 @@ Remove from favourites button: Each movie should have remove from favourites but
 
 
 # Demo-Link
-
+`<link>`: [IMDb-clone-mini](https://imdb-mini-clone.netlify.app/index.html)
