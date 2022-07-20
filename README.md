@@ -18,6 +18,12 @@ Display a list of all the favourite movies.
 Make this list persistent (should have the same number of movies before and after closing the browser/refreshing the browser).
 Remove from favourites button: Each movie should have remove from favourites button, clicking on which should remove that movie from the list.
 
+- Photos Page 
+clicking on this button will show you the relevant movie image if there is available for the movie
+
+- videos page 
+clicking on this button will show you the relevant movie videos from youtube if there is available for the movie
+
 
 # Demo-Link
 `<link>`: [IMDb-clone-mini](https://imdb-mini-clone.netlify.app/index.html)
