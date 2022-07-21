@@ -46,7 +46,6 @@ Create a mini IMDB clone app. Use ONLY vanilla javascript, no libraries or frame
 ![videosPage](/Assets/MoviePageVideos.jpg)
 ![photosPage](/Assets/MoviePagePhotos.jpg)
 
-
 ## WatchlistPage
 
 ![WatchlistPage](/Assets/WatchlistPage.jpg)
