@@ -33,9 +33,9 @@ Create a mini IMDB clone app. Use ONLY vanilla javascript, no libraries or frame
 
 ## Homepage
 
-![HomePage](/assets/HomePage1.jpg)
-![HomePage](/assets/HomePage2.jpg)
-![HomePage](/assets/FooterAndHomePage3.jpg)
+![HomePage](/Assets/HomePage1.jpg)
+![HomePage](/Assets/HomePage2.jpg)
+![HomePage](/Assets/FooterAndHomePage3.jpg)
 ![SearchResults](/Assets/SearchResultPage.jpg)
 ![watchlistAlert](/Assets/AddedToWatchlistAlert.jpg)
 
