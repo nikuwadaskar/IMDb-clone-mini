@@ -1609,7 +1609,7 @@ function buildWatchlist(data) {
     .attr("data-movieID", data.id);
   $("#watchlist-movie-" + data.id + "-plot").html(data.overview);
   $("#more-to-watch").html(num + " Movies to watch");
-  alert(data.title+' id added to the watchlist')
+  alert(data.title+' is added to the watchlist')
 }
 
 function addTowatchlist(data) {
